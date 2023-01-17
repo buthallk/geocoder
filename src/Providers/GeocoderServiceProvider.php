@@ -2,6 +2,8 @@
 
 namespace Geocoder\Providers;
 
+use Geocoder\Factories\GeoCodeAddressFactory;
+use Geocoder\Factories\GeoCodeAddressFactoryInterface;
 use Geocoder\Geocoder\GeocoderInterface;
 use Geocoder\Geocoder\GoogleGeocoder;
 use Geocoder\Geocoder\YandexGeocoder;
@@ -19,8 +21,10 @@ class GeocoderServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->Geocoder->bind(GeocoderResolverInterface::class, GeocoderResolver::class);
-        $this->Geocoder->tag([GoogleGeocoder::class, YandexGeocoder::class], GeocoderInterface::class);
-        $this->Geocoder->bind(PolygonServiceInterface::class, PolygonService::class);
+        $this->app->bind(GeocoderResolverInterface::class, GeocoderResolver::class);
+        $this->app->tag([GoogleGeocoder::class, YandexGeocoder::class], GeocoderInterface::class);
+        $this->app->bind(PolygonServiceInterface::class, PolygonService::class);
+        $this->app->bind(GeoCodeAddressFactoryInterface::class, GeoCodeAddressFactory::class);
+
     }
 }
