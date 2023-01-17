@@ -17,7 +17,7 @@ class GoogleGeocoder extends Geocoder implements GeocoderInterface
     protected function getQuery(GeoCodeAddressDtoInterface $address): string
     {
         return self::GEO_API_KEY . 'address=' . $address->getAddressForGeoCode() .
-            '&key=' . config('Geocoder.geo_api_key') . '&language=ru';
+            '&key=' . config('geocoder.geo_api_key') . '&language=ru';
     }
 
     public function getGeoCodeData(?array $geoCodeResponse): ?GeoCodeDtoInterface
