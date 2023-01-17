@@ -1,0 +1,46 @@
+{
+  "name": "yobidoyobi/geocoder",
+  "description": "Yobidoyobi geocoder",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fadeev Georgii",
+      "email": "georgii.fadeev@yobidoyobi.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/console": "*",
+    "illuminate/database": "*",
+    "illuminate/support": "*",
+    "spatie/data-transfer-object": "^3.9",
+    "zircote/swagger-php": "^4.6",
+    "symfony/serializer": "^6.2"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.2",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpunit"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "App\\Providers\\GeocoderServiceProvider"
+      ]
+    }
+  }
+}
