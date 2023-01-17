@@ -22,7 +22,7 @@ class GeocoderServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/geocoder.config.php' => config_path('geocoder.config.php'),
+            __DIR__ . '/../../config/geocoder.config.php' => config_path('geocoder.config.php'),
         ]);
     }
 

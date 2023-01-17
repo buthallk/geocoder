@@ -20,7 +20,7 @@ class YandexGeocoder extends Geocoder implements GeocoderInterface
 
     protected function getQuery(GeoCodeAddressDtoInterface $address): string
     {
-        return static::GEO_API_KEY  . 'apikey=' . config('geocoder.yandex_geo_api_key') .
+        return static::GEO_API_KEY  . 'apikey=' . config('geocoder.config.yandex_geo_api_key') .
             '&geocode=' . $address->getAddressForGeoCode() . '&lang=ru&format=json';
     }
 
