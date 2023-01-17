@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\GeoCode\Resolvers;
+namespace App\Resolvers;
 
-use App\Modules\GeoCode\Geocoder\GeocoderInterface;
+use App\Geocoder\GeocoderInterface;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
