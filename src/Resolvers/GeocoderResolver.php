@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Resolvers;
+namespace App\Modules\GeoCode\Resolvers;
 
-use App\Geocoder\GeocoderInterface;
+use App\Modules\GeoCode\Geocoder\GeocoderInterface;
+use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 class GeocoderResolver implements GeocoderResolverInterface
 {
@@ -11,6 +13,10 @@ class GeocoderResolver implements GeocoderResolverInterface
     {
     }
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function getGeocoderByType(string $geoCoderType): GeocoderInterface
     {
         foreach ($this->container->tagged(GeocoderInterface::class) as $geoCoder)
