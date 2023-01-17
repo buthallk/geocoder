@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Resolvers;
+namespace Geocoder\Resolvers;
 
-use \App\Geocoder\GeocoderInterface;
+use \Geocoder\Geocoder\GeocoderInterface;
 
 interface GeocoderResolverInterface
 {

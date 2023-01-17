@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Polygon\Builders;
+namespace Geocoder\Polygon\Builders;
 
-use App\Polygon\Geometry\Point;
-use App\Polygon\Geometry\Polygon;
+use Geocoder\Polygon\Geometry\Point;
+use Geocoder\Polygon\Geometry\Polygon;
 
 interface PolygonBuilderInterface
 {

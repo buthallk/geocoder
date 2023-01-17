@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Polygon\Services;
+namespace Geocoder\Polygon\Services;
 
-use App\Polygon\Geometry\Point;
+use Geocoder\Polygon\Geometry\Point;
 
 interface PolygonServiceInterface
 {

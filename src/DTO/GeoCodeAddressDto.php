@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DTO;
+namespace Geocoder\DTO;
 
-use App\Enums\CompanyAddress;
+use Geocoder\Enums\CompanyAddress;
 
 class GeoCodeAddressDto implements GeoCodeAddressDtoInterface
 {

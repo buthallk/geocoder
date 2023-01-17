@@ -1,10 +1,10 @@
 <?php
 
-namespace App\DTO;
+namespace Geocoder\DTO;
 
-use App\Modules\Companies\Enums\CompanyAddress;
-use App\Modules\GeoCode\Enums\GeocoderType;
-use App\Modules\Polygon\Geometry\Point;
+use Geocoder\Modules\Companies\Enums\CompanyAddress;
+use Geocoder\Modules\GeoCode\Enums\GeocoderType;
+use Geocoder\Modules\Polygon\Geometry\Point;
 use Illuminate\Support\Facades\Log;
 use JsonSerializable;
 use OpenApi\Attributes as SWG;

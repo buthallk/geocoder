@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DTO;
+namespace Geocoder\DTO;
 
 use OpenApi\Attributes as SWG;
 use Symfony\Component\Serializer\Annotation\Groups;

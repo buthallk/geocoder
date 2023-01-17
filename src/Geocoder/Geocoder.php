@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Geocoder;
+namespace Geocoder\Geocoder;
 
-use App\DTO\GeoCodeAddressDtoInterface;
-use App\DTO\GeoCodeDtoInterface;
-use App\Enums\GeocoderType;
+use Geocoder\DTO\GeoCodeAddressDtoInterface;
+use Geocoder\DTO\GeoCodeDtoInterface;
+use Geocoder\Enums\GeocoderType;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;

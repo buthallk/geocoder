@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Polygon\Exceptions;
+namespace Geocoder\Polygon\Exceptions;
 
 use RuntimeException;
 

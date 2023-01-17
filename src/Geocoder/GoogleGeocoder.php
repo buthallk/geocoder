@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Geocoder;
+namespace Geocoder\Geocoder;
 
-use App\DTO\GeoCodeAddressDtoInterface;
-use App\DTO\GeoCodeDtoInterface;
-use App\DTO\GoogleGeoCodeDTO;
-use App\Enums\GeocoderType;
+use Geocoder\DTO\GeoCodeAddressDtoInterface;
+use Geocoder\DTO\GeoCodeDtoInterface;
+use Geocoder\DTO\GoogleGeoCodeDTO;
+use Geocoder\Enums\GeocoderType;
 
 class GoogleGeocoder extends Geocoder implements GeocoderInterface
 {
@@ -17,7 +17,7 @@ class GoogleGeocoder extends Geocoder implements GeocoderInterface
     protected function getQuery(GeoCodeAddressDtoInterface $address): string
     {
         return self::GEO_API_KEY . 'address=' . $address->getAddressForGeoCode() .
-            '&key=' . config('app.geo_api_key') . '&language=ru';
+            '&key=' . config('Geocoder.geo_api_key') . '&language=ru';
     }
 
     public function getGeoCodeData(?array $geoCodeResponse): ?GeoCodeDtoInterface

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\DTO;
+namespace Geocoder\DTO;
 
-use App\Enums\CompanyAddress;
-use App\Polygon\Geometry\Point;
+use Geocoder\Enums\CompanyAddress;
+use Geocoder\Polygon\Geometry\Point;
 use Spatie\DataTransferObject\DataTransferObject;
 
 class YandexGeoCodeDto extends DataTransferObject implements GeoCodeDtoInterface

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DTO;
+namespace Geocoder\DTO;
 
-use App\Enums\CompanyAddress;
+use Geocoder\Enums\CompanyAddress;
 use Spatie\DataTransferObject\DataTransferObject;
 use Symfony\Component\Serializer\Annotation\Groups;
 use OpenApi\Attributes as SWG;

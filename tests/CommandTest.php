@@ -4,11 +4,11 @@ namespace Yuraplohov\LaravelExample\Test;
 
 class CommandTest extends FeatureTestCase
 {
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($Geocoder)
     {
-        parent::getEnvironmentSetUp($app);
+        parent::getEnvironmentSetUp($Geocoder);
 
-        $app['config']->set('example.param', 200);
+        $Geocoder['config']->set('example.param', 200);
     }
 
     /**

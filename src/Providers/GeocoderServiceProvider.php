@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Providers;
+namespace Geocoder\Providers;
 
-use App\Geocoder\GeocoderInterface;
-use App\Geocoder\GoogleGeocoder;
-use App\Geocoder\YandexGeocoder;
-use App\Polygon\Services\PolygonService;
-use App\Polygon\Services\PolygonServiceInterface;
-use App\Resolvers\GeocoderResolver;
-use App\Resolvers\GeocoderResolverInterface;
+use Geocoder\Geocoder\GeocoderInterface;
+use Geocoder\Geocoder\GoogleGeocoder;
+use Geocoder\Geocoder\YandexGeocoder;
+use Geocoder\Polygon\Services\PolygonService;
+use Geocoder\Polygon\Services\PolygonServiceInterface;
+use Geocoder\Resolvers\GeocoderResolver;
+use Geocoder\Resolvers\GeocoderResolverInterface;
 use Illuminate\Support\ServiceProvider;
 
 class GeocoderServiceProvider extends ServiceProvider
@@ -19,8 +19,8 @@ class GeocoderServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind(GeocoderResolverInterface::class, GeocoderResolver::class);
-        $this->app->tag([GoogleGeocoder::class, YandexGeocoder::class], GeocoderInterface::class);
-        $this->app->bind(PolygonServiceInterface::class, PolygonService::class);
+        $this->Geocoder->bind(GeocoderResolverInterface::class, GeocoderResolver::class);
+        $this->Geocoder->tag([GoogleGeocoder::class, YandexGeocoder::class], GeocoderInterface::class);
+        $this->Geocoder->bind(PolygonServiceInterface::class, PolygonService::class);
     }
 }

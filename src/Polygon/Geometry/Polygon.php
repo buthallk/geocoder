@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Polygon\Geometry;
+namespace Geocoder\Polygon\Geometry;
 
 use ArrayIterator;
 use Generator;

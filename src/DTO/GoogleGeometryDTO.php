@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DTO;
+namespace Geocoder\DTO;
 
 use JsonSerializable;
 use OpenApi\Attributes as SWG;

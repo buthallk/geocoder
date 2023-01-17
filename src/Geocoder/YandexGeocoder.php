@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Geocoder;
+namespace Geocoder\Geocoder;
 
-use App\DTO\GeoCodeAddressDtoInterface;
-use App\DTO\GeoCodeDtoInterface;
-use App\DTO\YandexGeoCodeDto;
-use App\Enums\GeocoderType;
+use Geocoder\DTO\GeoCodeAddressDtoInterface;
+use Geocoder\DTO\GeoCodeDtoInterface;
+use Geocoder\DTO\YandexGeoCodeDto;
+use Geocoder\Enums\GeocoderType;
 use Illuminate\Support\Facades\Http;
 use Spatie\DataTransferObject\Exceptions\UnknownProperties;
 
@@ -20,7 +20,7 @@ class YandexGeocoder extends Geocoder implements GeocoderInterface
 
     protected function getQuery(GeoCodeAddressDtoInterface $address): string
     {
-        return static::GEO_API_KEY  . 'apikey=' . config('app.yandex_geo_api_key') .
+        return static::GEO_API_KEY  . 'apikey=' . config('Geocoder.yandex_geo_api_key') .
             '&geocode=' . $address->getAddressForGeoCode() . '&lang=ru&format=json';
     }
 
@@ -41,7 +41,7 @@ class YandexGeocoder extends Geocoder implements GeocoderInterface
     {
         $result = [];
 
-        $projectResponse = Http::withHeaders(['X-Auth-Key' => config('app.yandex_developer_key')])
+        $projectResponse = Http::withHeaders(['X-Auth-Key' => config('Geocoder.yandex_developer_key')])
             ->get(static::YANDEX_DEVELOPER_URL . 'projects')->json();
 
         $projects = $projectResponse['projects'] ?? [];
@@ -50,7 +50,7 @@ class YandexGeocoder extends Geocoder implements GeocoderInterface
         $projectId = $project['id'] ?? null;
         if($projectId)
         {
-            $serviceResponse = Http::withHeaders(['X-Auth-Key' => config('app.yandex_developer_key')])
+            $serviceResponse = Http::withHeaders(['X-Auth-Key' => config('Geocoder.yandex_developer_key')])
                 ->get(static::YANDEX_DEVELOPER_URL . 'projects/' . $projectId . '/services')->json();
 
             $services = $serviceResponse['services'] ?? null;
@@ -59,7 +59,7 @@ class YandexGeocoder extends Geocoder implements GeocoderInterface
             $serviceId = $service['id'] ?? null;
 
             $result = $serviceId ?
-                Http::withHeaders(['X-Auth-Key' => config('app.yandex_developer_key')])
+                Http::withHeaders(['X-Auth-Key' => config('Geocoder.yandex_developer_key')])
                     ->get(static::YANDEX_DEVELOPER_URL . "projects/$projectId/services/$serviceId/limits")
                     ->json() : [];
         }

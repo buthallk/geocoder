@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace Geocoder\Enums;
 
 enum CompanyAddress: string
 {

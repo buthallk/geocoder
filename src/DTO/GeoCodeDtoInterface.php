@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DTO;
+namespace Geocoder\DTO;
 
-use App\Polygon\Geometry\Point;
+use Geocoder\Polygon\Geometry\Point;
 
 interface GeoCodeDtoInterface
 {

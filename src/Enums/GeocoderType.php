@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Enums;
+namespace Geocoder\Enums;
 
-use App\Geocoder\YandexGeocoder;
+use Geocoder\Geocoder\YandexGeocoder;
 
 enum GeocoderType: string
 {

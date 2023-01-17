@@ -13,17 +13,17 @@ abstract class FeatureTestCase extends TestCase
         $this->setUpDatabase();
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($Geocoder)
     {
         return [
             'Yuraplohov\LaravelExample\Providers\LaravelExampleServiceProvider',
         ];
     }
 
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($Geocoder)
     {
-        $app['config']->set('database.default', 'sqlite');
-        $app['config']->set('database.connections.sqlite', [
+        $Geocoder['config']->set('database.default', 'sqlite');
+        $Geocoder['config']->set('database.connections.sqlite', [
             'driver' => 'sqlite',
             'database' => ':memory:',
             'prefix' => '',

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Geocoder;
+namespace Geocoder\Geocoder;
 
-use App\DTO\GeoCodeAddressDtoInterface;
-use App\DTO\GeoCodeDtoInterface;
+use Geocoder\DTO\GeoCodeAddressDtoInterface;
+use Geocoder\DTO\GeoCodeDtoInterface;
 
 interface GeocoderInterface
 {

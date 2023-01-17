@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Factories;
+namespace Geocoder\Factories;
 
-use App\DTO\AddressDTO;
-use App\DTO\GeoCodeAddressDto;
+use Geocoder\DTO\AddressDTO;
+use Geocoder\DTO\GeoCodeAddressDto;
 
 interface GeoCodeAddressFactoryInterface
 {

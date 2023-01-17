@@ -23,12 +23,12 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "Geocoder\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "App\\Test\\": "tests/"
+      "Geocoder\\Test\\": "tests/"
     }
   },
   "scripts": {
@@ -39,7 +39,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "App\\Providers\\GeocoderServiceProvider"
+        "Geocoder\\Providers\\GeocoderServiceProvider"
       ]
     }
   }

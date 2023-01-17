@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Polygon\Builders;
+namespace Geocoder\Polygon\Builders;
 
-use App\Polygon\Exceptions\PolygonException;
-use App\Polygon\Geometry\BoundingBox;
-use App\Polygon\Geometry\Line;
-use App\Polygon\Geometry\Point;
-use App\Polygon\Geometry\Polygon;
+use Geocoder\Polygon\Exceptions\PolygonException;
+use Geocoder\Polygon\Geometry\BoundingBox;
+use Geocoder\Polygon\Geometry\Line;
+use Geocoder\Polygon\Geometry\Point;
+use Geocoder\Polygon\Geometry\Polygon;
 use ArrayIterator;
 
 class PolygonBuilder implements PolygonBuilderInterface
